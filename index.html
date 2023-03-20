@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Murli Khaire | Java Backend Developer</title>
+  <link rel="icon" href="img/logo1.png" type="image/icon type">
+  <link rel="stylesheet" href="./styles/main.css" />
+  <link rel="stylesheet" href="./nav.css">
+  <!-- <link rel="stylesheet" href="./styles/tablat.css"> -->
+  <!-- <link rel="stylesheet" href="./styles/mobile.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+</head>
+
+<body>
+  <nav class="nav" id="nav-menu">
+    <div class="container">
+      <div class="logo"><img src="img/logo1.png" onclick="homePage()" alt=""></div>
+      <ul>
+        <li><a href="index.html" class="current">Home</a></li>
+        <li><a class="link" href="#about" data-scroll>About Me</a></li>
+        <li><a class="link" href="#skills" data-scroll>Skills</a></li>
+        <li><a class="link" href="#projects" data-scroll>Projects</a></li>
+        <li><a class="link" href="#contact" data-scroll>Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div id="particles-js">
+
+    <div class="header" id="home">
+      <div class="header-flex">
+        <h1>
+          <span class="site-question">Hi, my name is</span>
+          <span class="site-title">Murli Khaire</span>
+          <span class="site-description">Java Backend Developer</span>
+        </h1>
+        <div class="header-icons">
+          <a class="resumeClass" id="resume-link-2" onclick="resumeFun()" href="https://drive.google.com/file/d/1kUgPf6BbeBBic_pfeDKNZ7lm_EE4KMSB/view"
+            target="_blank" download="Murli_Khaire_Resume.pdf">Resume
+            <img src="img/pdf.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="programmer">
+        <img src="img/programmer-removebg-preview.png" alt="">
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <!-- About Section -->
+  <section id="about">
+    <!-- User Introduction-->
+    <h1>About Me</h1>
+    <div class="user-details">
+      <picture>
+        <img type="image/webp" srcset="./img/Murli-Image.jpg" alt="Professional Me" />
+      </picture>
+      <p>Innovative, result-driven Java Backend Developer with a good grasp
+        of Java, Spring boot, and Databases, and intuitive problem-solving
+        skills. Ability to translate business requirements into technical
+        solutions. looking forward to kick-starting his career within the IT
+        industry to fully utilize his skills and contribute to wonderful projects.</p>
+    </div>
+
+  </section>
+
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h1>Technical Skills</h1>
+    <div class="user-skills">
+      <div class="skills-card">
+        <img class="skills-card-img" src="img/html-5.png" alt="">
+        <p class="skills-card-name">HTML</p>
+      </div>
+      <div class="skills-card">
+        <img class="skills-card-img" src="img/css-3.png" alt="">
+        <p class="skills-card-name">CSS</p>
+      </div>
+      <div class="skills-card">
+        <img class="skills-card-img" src="img/js.png" alt="">
+        <p class="skills-card-name">JavScript</p>
+      </div>
+
+      <div class="skills-card">
+        <img class="skills-card-img" src="img/java.png" alt="">
+        <p class="skills-card-name">Java</p>
+      </div>
+      <div class="skills-card">
+        <img class="skills-card-img" src="img/mysql.png" alt="">
+        <p class="skills-card-name">MySql</p>
+      </div>
+      <div class="skills-card">
+        <img class="skills-card-img" src="img/github.png" alt="">
+        <p class="skills-card-name">Github</p>
+      </div>
+      <div class="skills-card">
+        <img class="skills-card-img" src="img/visual-studio.png" alt="">
+        <p class="skills-card-name">VS Code</p>
+      </div>
+      <div class="skills-card">
+        <img class="skills-card-img" src="img/spring-boot.png" alt="">
+        <p class="skills-card-name">Spring Boot</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="github">
+    <p>github section here</p>
+  </section>
+  <section id="project">
+    <p>Project section here</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h1>Contact Me</h1>
+    <div class="flex-div">
+      <form id="form">
+        <input type="text" name="name" id="name" placeholder="Your Name">
+        <input type="email" name="email" id="email" placeholder="Your Email">
+        <input type="textarea" name="message" id="message" placeholder="Your Massage">
+        <input type="button" value="Submit">
+      </form>
+      <div class="contact-icon">
+        <img src="img/github-sign.png" onclick="gihub()" id="contact-github" alt="">
+        <img src="img/linkedin.png" onclick="linkedin()" id="contact-linkedin" alt="">
+        <img src="img/viber.png" id="contact-phone" alt="">
+        <img src="img/gmail.png" onclick="email()" id="contact-email" alt="">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Import JS: Particles Theme -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <!-- Import JS: Sweet Scroll -->
+  <script src="./script/sweet-scroll.min.js"></script>
+
+  <!-- Import JS: Main Script -->
+  <script src="./script/main.js"></script>
+
+  <script src="./script/nav.js" type="module"></script>
+</body>
+
+<script>
+  function homePage() {
+    window.location.href = "index.html";
+  }
+
+  function resumeFun() {
+    location.href = "https://drive.google.com/u/0/uc?id=1kUgPf6BbeBBic_pfeDKNZ7lm_EE4KMSB&export=download";
+  }
+
+  function gihub(){
+    window.open("https://github.com/Murli0399", '_blank');
+  }
+
+  function linkedin(){
+    window.open("https://www.linkedin.com/in/murli-khaire/", '_blank');
+  }
+
+  function email(){
+    window.open("murlikhaire28@gmail.com", '_blank');
+  }
+</script>
+
+</html>
