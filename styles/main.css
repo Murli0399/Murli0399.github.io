@@ -132,35 +132,42 @@ body {
 
 #about {
     padding-top: 50px;
-    width: 80%;
+    width: 100%;
+    background: white;
     margin: 0 auto;
-    max-width: 960px;
     padding-bottom: 130px;
 }
 
 section h1 {
     text-align: center;
     font-size: 50px;
-    color: white;
+    color: #ffffff;
     font-weight: 700;
 }
-
+#about h1{
+    color: #0a192f;
+}
 .user-details {
+    width: 60%;
+    margin: auto;
     display: flex;
-    /* border: 1px solid red; */
+    border: 1px solid rgb(176, 176, 176);
     justify-content: space-around;
     align-items: center;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .user-details picture {
     /* border: 1px solid red; */
     text-align: right;
-    /* width: 45%; */
+    width: 40%;
 }
 
 .user-details picture img {
-    width: 50%;
-    border: 5px solid #64ffda;
+    width: 65%;
+    border: 2px solid black;
     margin-right: 40px;
 }
 
@@ -171,9 +178,10 @@ section h1 {
 
 .user-details p {
     /* border: 1px solid red; */
-    /* width: 45%; */
-    color: white;
-    font-size: 18px;
+    width: 65%;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 /* about section is ending here */
@@ -182,6 +190,11 @@ section h1 {
 #skills {
     padding-top: 50px;
     padding-bottom: 130px;
+    background: #fff;
+}
+
+#skills h1 {
+    color: #0a192f;
 }
 
 .user-skills {
@@ -193,55 +206,53 @@ section h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* border: 1px solid red; */
-
 }
 
 .user-skills .skills-card {
-    width: 21%;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    margin: 13px 0;
+    width: 20%;
+    margin: 30px 0;
     padding: 10px;
     cursor: pointer;
 }
 
 .user-skills .skills-card .skills-card-img {
-    width: 50%;
+    width: 45%;
+    transition: .6s ease;
 }
 
-.user-skills .skills-card:hover .skills-card-img {
-    transition: .3s ease-in-out;
-    width: 40%;
+.user-skills .skills-card .skills-card-img:hover {
+
+    transform: scale(1.3);
 }
 
 .user-skills .skills-card .skills-card-name {
     font-size: 22px;
-    font-weight: 500;
-    color: white;
+    font-weight: 800;
+    color: #0a192f;
     margin: 0;
-    padding: 5px;
 }
-
 
 
 /* contact form css here  */
 
 #form {
     max-width: 450px;
-    border: 1px solid rgb(0, 0, 0);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     margin: auto;
     text-align: center;
-    background: #f5f5f5;
     padding: 40px 20px;
     border-radius: 20px;
 }
 
 #contact {
     padding-top: 50px;
-    width: 80%;
-    margin: 0 auto;
-    max-width: 960px;
-    padding-bottom: 130px;
+    width: 100%;
+    padding-bottom: 60px;
+    background: #fff;
+}
+
+#contact h1 {
+    color: #0a192f;
 }
 
 #form input {
@@ -251,7 +262,8 @@ section h1 {
     margin: 10px auto;
     font-size: 18px;
     color: #000000;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(176, 176, 176);
+    outline: none;
 }
 
 #form #message {
@@ -260,10 +272,17 @@ section h1 {
 
 }
 
+.form-title {
+    text-align: left;
+    font-size: 22px;
+    padding-left: 20px;
+    margin-top: 0;
+}
+
 #form input[type=button] {
     cursor: pointer;
     background: #0c326c;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 20px;
 }
 
@@ -277,24 +296,134 @@ section h1 {
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .contact-icon {
-    width: 10%;
+    width: 25%;
+    max-height: 220px;
+    border-radius: 25px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 20px;
+}
+
+.contact-icon h3 {
+    margin-top: 0;
+}
+
+.contact-icon p {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.contact-icon p:hover {
+    color: #2cd4d9;
+}
+
+.contact-icon p:hover img {
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;
 }
 
 .contact-icon img {
-    width: 100%;
+    width: 10%;
     cursor: pointer;
+    padding-right: 10px;
 }
 
 .contact-icon img:hover {
     transform: scale(1.2);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
+
+footer p {
+    font-size: 22px;
+    text-align: center;
+    margin: 15px 0;
+    color: #fff;
+}
+
+footer p span {
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #2cd4d9;
+}
+
+/* project section start here  */
+
+#projects {
+    padding-top: 50px;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 960px;
+    padding-bottom: 130px;
+}
+
+#projects .project-card {
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 20px;
+}
+
+#slideshow1 {
+    width: 50%;
+    border: 1px solid rgb(187, 187, 187);
+}
+
+#slideshow1 img {
+    width: 100%;
+}
+
+#projects .project-card .description {
+    padding: 0 10px;
+    color: #000000;
+    width: 46%;
+}
+
+#projects .project-card .description h3 {
+    font-size: 25px;
+    text-align: center;
+    margin: 0;
+}
+
+#projects .project-card .description p {
+    font-weight: 500;
+}
+
+#projects .project-card .description h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    padding: 9px 0;
+}
+
+#projects .project-card .description h4 span {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#projects .project-card .description .link {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#projects .project-card .description .link img {
+    width: 10%;
+    cursor: pointer;
+    transition: .6s ease;
+}
+#projects .project-card .description .link img:hover {
+    transform: scale(1.2);
+}
+
+
+
+
+
 
 @media only screen and (max-width: 980px) {
 
