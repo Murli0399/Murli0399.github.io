@@ -98,7 +98,7 @@ body {
 }
 
 .header-icons img {
-    width: 25%;
+    width: 20%;
 }
 
 .resumeClass {
@@ -151,6 +151,7 @@ section h1 {
     width: 60%;
     margin: auto;
     display: flex;
+    background: linear-gradient(to right, #0a192f, #0c326c);
     border: 1px solid rgb(176, 176, 176);
     justify-content: space-around;
     align-items: center;
@@ -178,10 +179,10 @@ section h1 {
 
 .user-details p {
     /* border: 1px solid red; */
-    width: 65%;
-    color: black;
+    width: 70%;
+    color: rgb(255, 255, 255);
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 /* about section is ending here */
@@ -336,7 +337,7 @@ section h1 {
     transition: transform 0.2s ease-in-out;
 }
 
-footer p {
+footer  {
     font-size: 22px;
     text-align: center;
     margin: 15px 0;
@@ -366,6 +367,7 @@ footer p span {
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     padding: 20px;
+    margin: 25px auto;
 }
 
 #slideshow1 {
@@ -411,8 +413,13 @@ footer p span {
     justify-content: space-around;
 }
 
+#projects .project-card .description .link a{
+    display: flex;
+}
+
 #projects .project-card .description .link img {
-    width: 10%;
+    margin: auto;
+    width: 20%;
     cursor: pointer;
     transition: .6s ease;
 }
