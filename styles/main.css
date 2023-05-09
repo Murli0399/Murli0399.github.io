@@ -190,11 +190,11 @@ section h1 {
 #skills {
     padding-top: 50px;
     padding-bottom: 130px;
-    background: #fff;
+    /* background: #918080; */
 }
 
 #skills h1 {
-    color: #0a192f;
+    color: #ffffff;
 }
 
 .user-skills {
@@ -227,8 +227,8 @@ section h1 {
 
 .user-skills .skills-card .skills-card-name {
     font-size: 22px;
-    font-weight: 800;
-    color: #0a192f;
+    font-weight: 500;
+    color: #ffffff;
     margin: 0;
 }
 
@@ -236,9 +236,8 @@ section h1 {
 /* contact form css here  */
 
 #form {
-    max-width: 450px;
+    max-width: 370px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    margin: auto;
     text-align: center;
     padding: 40px 20px;
     border-radius: 20px;
@@ -256,18 +255,18 @@ section h1 {
 }
 
 #form input {
-    height: 50px;
-    width: 400px;
+    height: 40px;
+    width: 320px;
     background: transparent;
-    margin: 10px auto;
-    font-size: 18px;
+    margin: 5px auto;
+    font-size: 16px;
     color: #000000;
     border: 1px solid rgb(176, 176, 176);
     outline: none;
 }
 
 #form #message {
-    height: 230px;
+    height: 100px;
     word-wrap: break-word;
 
 }
@@ -284,10 +283,11 @@ section h1 {
     background: #0c326c;
     color: rgb(255, 255, 255);
     font-size: 20px;
+    height: 50px;
+    transition: .5s ease-in-out;
 }
 
 #form input[type=button]:hover {
-    transition: .5s ease-in-out;
     background: #294b7d;
 }
 
@@ -420,15 +420,32 @@ footer p span {
     transform: scale(1.2);
 }
 
+#github{
+    padding-top: 50px;
+    width: 100%;
+    background: white;
+    margin: 0 auto;
+    padding-bottom: 130px;
+}
 
+#github h1{
+    color: #0a192f;
+}
 
+.react-activity-calendar{
+    width: 70%;
+}
 
-
+.git-calander{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+}
 
 @media only screen and (max-width: 980px) {
 
     .header {
-
         width: 80%;
         align-items: center;
         text-align: center;
@@ -441,243 +458,55 @@ footer p span {
         width: 80%;
     }
 
-
-
-    .header .site-question {
-        font-size: 30px;
-        line-height: 1;
-        color: #64ffda;
-    }
-
-    .header .site-title {
-        font-size: 35px;
-        display: block;
-        line-height: 1;
-        color: #fff;
-    }
-
-    .header .site-title {
-        margin: 0;
-        font-size: 5rem;
-    }
-
-    .header .site-description {
-        display: block;
-        line-height: 1;
-        color: #e2e2e2;
-        margin-top: 10px;
-        font-size: 60px
-    }
-
-    .header-icons {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .header-icons img {
-        width: 25%;
-    }
-
-    .resumeClass {
-        background-color: transparent;
-        padding: 10px 15px;
-        color: white;
-        width: 150px;
-        font-size: 25px;
-        font-weight: bold;
-        letter-spacing: 2px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        border: 1px solid #64ffda;
-        text-decoration: none;
-    }
-
-    .resumeClass:hover {
-        color: rgb(159, 159, 159);
-        background-color: transparent;
-    }
-
-    .resumeButton {
-        height: 10px;
-        width: 5px;
-    }
-
-    /* header section ending here */
-
-    /* about me section start here */
-
-    #about {
-        padding-top: 50px;
-        width: 80%;
-        margin: 0 auto;
-        max-width: 960px;
-        padding-bottom: 130px;
-    }
-
-    section h1 {
-        text-align: center;
-        font-size: 50px;
-        color: white;
-        font-weight: 700;
-    }
-
-    .user-details {
-        display: flex;
-        /* border: 1px solid red; */
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .user-details picture {
-        /* border: 1px solid red; */
-        text-align: right;
-        /* width: 45%; */
-    }
-
-    .user-details picture img {
-        width: 50%;
-        border: 5px solid #64ffda;
-        margin-right: 40px;
-    }
-
-    .user-details picture img:hover {
-        transform: scale(1.2);
-        transition: transform 0.5s ease-in-out;
-    }
-
-    .user-details p {
-        /* border: 1px solid red; */
-        /* width: 45%; */
-        color: white;
-        font-size: 18px;
-    }
-
-    /* about section is ending here */
-
-    /* skills section start here */
-    #skills {
-        padding-top: 50px;
-        padding-bottom: 130px;
-    }
-
-    .user-skills {
-        text-align: center;
-        font-size: 60px;
-        width: 80%;
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        /* border: 1px solid red; */
-
-    }
-
-    .user-skills .skills-card {
-        width: 21%;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-        margin: 13px 0;
-        padding: 10px;
-        cursor: pointer;
-    }
-
-    .user-skills .skills-card .skills-card-img {
-        width: 50%;
-    }
-
-    .user-skills .skills-card:hover .skills-card-img {
-        transition: .3s ease-in-out;
-        width: 40%;
-    }
-
-    .user-skills .skills-card .skills-card-name {
-        font-size: 22px;
-        font-weight: 500;
-        color: white;
-        margin: 0;
-        padding: 5px;
-    }
-
-
-
-    /* contact form css here  */
-
-    #form {
-        max-width: 450px;
-        border: 1px solid rgb(0, 0, 0);
-        margin: auto;
-        text-align: center;
-        background: #f5f5f5;
-        padding: 40px 20px;
-        border-radius: 20px;
-    }
-
-    #contact {
-        padding-top: 50px;
-        width: 80%;
-        margin: 0 auto;
-        max-width: 960px;
-        padding-bottom: 130px;
-    }
-
-    #form input {
-        height: 50px;
-        width: 400px;
-        background: transparent;
-        margin: 10px auto;
-        font-size: 18px;
-        color: #000000;
-        border: 1px solid rgb(0, 0, 0);
-    }
-
-    #form #message {
-        height: 230px;
-        word-wrap: break-word;
-
-    }
-
-    #form input[type=button] {
-        cursor: pointer;
-        background: #0c326c;
-        color: white;
-        font-size: 20px;
-    }
-
-    #form input[type=button]:hover {
-        transition: .5s ease-in-out;
-        background: #294b7d;
-    }
-
     .flex-div {
         width: 70%;
         margin: 0 auto;
         display: flex;
         justify-content: space-around;
-    }
-
-    .contact-icon {
-        width: 10%;
-        display: flex;
+        align-items: center;
         flex-direction: column;
-        justify-content: space-evenly;
     }
-
-    .contact-icon img {
-        width: 100%;
+    
+    .contact-icon {
+        width: 50%;
+        max-height: 220px;
+        border-radius: 25px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        padding: 20px;
+        margin-top: 25px;
+    }
+    
+    .contact-icon h3 {
+        margin-top: 0;
+    }
+    
+    .contact-icon p {
+        display: flex;
+        align-items: center;
         cursor: pointer;
     }
-
-
-
-    .header .site-description {
-        font-size: 50px
+    
+    .contact-icon p:hover {
+        color: #2cd4d9;
+    }
+    
+    .contact-icon p:hover img {
+        transform: scale(1.2);
+        transition: transform 0.2s ease-in-out;
+    }
+    
+    .contact-icon img {
+        width: 10%;
+        cursor: pointer;
+        padding-right: 10px;
+    }
+    
+    .contact-icon img:hover {
+        transform: scale(1.2);
+        transition: transform 0.2s ease-in-out;
     }
 
-    .flex-div {
-        width: 80%;
-    }
+
 
 }
 
