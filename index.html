@@ -9,6 +9,7 @@
   <!-- <link rel="stylesheet" href="./styles/tablat.css"> -->
   <!-- <link rel="stylesheet" href="./styles/mobile.css"> -->
   <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+
 </head>
 
 <body>
@@ -42,7 +43,7 @@
         </div>
       </div>
       <div class="programmer">
-        <img class="home-img" src="img/programmer-removebg-preview.png" alt="">
+        <img class="home-img" src="img/programmerCrop.png" alt="">
       </div>
     </div>
 
@@ -134,9 +135,32 @@
 
         <h4 class="project-tech-stack">Tech stack used : <span>HTML | CSS | JavaScript</span></h4>
         <div class="link">
-          <a href="https://github.com/Murli0399/quixotic-vest-9795">
+          <a href="https://github.com/Murli0399/quixotic-vest-9795" target="_blank">
             <img src="img/github-sign.png" class="project-github-link" alt=""></a>
-          <a href="https://quickdeals.netlify.app/"><img src="img/chain.png" class="project-deployed-link" alt=""></a>
+          <a href="https://quickdeals.netlify.app/" target="_blank"><img src="img/chain.png"
+              class="project-deployed-link" alt=""></a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div id="slideshow1">
+        <img src="img/take-a-trip.png" alt="">
+      </div>
+      <div class="description">
+        <h3 class="project-title">Take-A-Trip</h3>
+        <p class="project-description">A service-based website that provides users hasslefree experience to book flight
+          and hotel tickets at their fingertips.
+          we also book rail tickets and also enjoy our full holiday trips.
+        </p>
+
+        <h4 class="project-tech-stack">Tech stack used : <span>HTML | CSS | JavaScript</span></h4>
+        <div class="link">
+          <a href="https://github.com/Murli0399/purple-crook-1402" target="_blank">
+            <img src="img/github-sign.png" class="project-github-link" alt=""></a>
+          <a href="https://clone-of-mmt.netlify.app/" target="_blank"><img src="img/chain.png"
+              class="project-deployed-link" alt=""></a>
 
         </div>
       </div>
@@ -154,29 +178,10 @@
 
         <h4 class="project-tech-stack">Tech stack used : <span>HTML | CSS | JavaScript</span></h4>
         <div class="link">
-          <a href="https://github.com/Murli0399/quixotic-vest-9795">
+          <a href="https://github.com/Murli0399/quixotic-vest-9795" target="_blank">
             <img src="img/github-sign.png" class="project-github-link" alt=""></a>
-          <a href="https://quickdeals.netlify.app/"><img src="img/chain.png" class="project-deployed-link" alt=""></a>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div id="slideshow1">
-        <img src="img/quickdeals/Home-Page.png" alt="">
-      </div>
-      <div class="description">
-        <h3 class="project-title">QuickDeals</h3>
-        <p class="project-description">An E-commerce website clone of gearbest.com website. It sale varities of Product.
-          This was an Individual Project. In these website I created on Homepage, Registration / Login page, Product
-          Page, Cart Page, Payment Page.</p>
-
-        <h4 class="project-tech-stack">Tech stack used : <span>HTML | CSS | JavaScript</span></h4>
-        <div class="link">
-          <a href="https://github.com/Murli0399/quixotic-vest-9795">
-            <img src="img/github-sign.png" class="project-github-link" alt=""></a>
-          <a href="https://quickdeals.netlify.app/"><img src="img/chain.png" class="project-deployed-link" alt=""></a>
+          <a href="https://quickdeals.netlify.app/" target="_blank"><img src="img/chain.png"
+              class="project-deployed-link" alt=""></a>
 
         </div>
       </div>
@@ -195,9 +200,10 @@
 
         <h4 class="project-tech-stack">Tech stack used : <span>HTML | CSS | JavaScript</span></h4>
         <div class="link">
-          <a href="https://github.com/Murli0399/quixotic-vest-9795">
+          <a href="https://github.com/Murli0399/quixotic-vest-9795" target="_blank">
             <img src="img/github-sign.png" class="project-github-link" alt=""></a>
-          <a href="https://quickdeals.netlify.app/"><img src="img/chain.png" class="project-deployed-link" alt=""></a>
+          <a href="https://quickdeals.netlify.app/" target="_blank"><img src="img/chain.png"
+              class="project-deployed-link" alt=""></a>
 
         </div>
       </div>
@@ -209,12 +215,15 @@
   <section id="contact">
     <h1>Contact me</h1>
     <div class="flex-div">
-      <form id="form">
+      <form id="form" onsubmit="send(); reset(); return false;">
         <h3 class="form-title">Message me</h3>
-        <input type="text" name="name" id="name" placeholder="Your Name">
-        <input type="email" name="email" id="email" placeholder="Your Email">
-        <input type="textarea" name="message" id="message" placeholder="Your Massage">
-        <input type="button" value="Submit">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="What's your good name?">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="What's your email address?">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="2" placeholder="What can I help you?"></textarea>
+        <input type="submit" value="Submit">
       </form>
       <div class="contact-icon">
         <h3>Get in touch</h3>
@@ -239,7 +248,7 @@
   </section>
 
   <footer>
-    <!-- <p>© Copyright Designed by <span>Murli Khaire</span></p> -->
+    <p>Designed by <span>Murli Khaire</span></p>
   </footer>
 
   <!-- Import JS: Particles Theme -->
@@ -252,6 +261,8 @@
 
   <script src="./script/nav.js" type="module"></script>
   <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"> </script>
+  <script src="script/email.js"></script>
 </body>
 
 <script>
