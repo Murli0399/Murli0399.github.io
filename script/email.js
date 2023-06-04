@@ -15,6 +15,6 @@ function send() {
       "Email : " + email + "<br/><br/>" +
       " " + message
   }).then(
-    msg => alert(msg)
+    msg => alert("Your message send successfully")
   );
 }

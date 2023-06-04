@@ -378,19 +378,19 @@ footer p span {
     background: #ffffff;
     display: flex;
     justify-content: space-between;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     padding: 20px;
-    margin: 25px auto;
+    margin: 60px auto;
 }
 
 #slideshow1 {
     width: 50%;
-    border: 1px solid rgb(187, 187, 187);
 }
 
 #slideshow1 img {
     width: 100%;
+    border: 1px solid rgb(187, 187, 187);
 }
 
 #projects .project-card .description {
@@ -407,13 +407,15 @@ footer p span {
 
 #projects .project-card .description p {
     font-weight: 500;
+    text-align: justify;
+    padding: 0 10px;
 }
 
 #projects .project-card .description h4 {
     font-size: 18px;
     font-weight: 600;
     margin: 0;
-    padding: 9px 0;
+    padding: 9px;
 }
 
 #projects .project-card .description h4 span {
