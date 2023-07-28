@@ -456,8 +456,13 @@ footer p span {
     color: #0a192f;
 }
 
-.react-activity-calendar {
+.calendar {
     width: 70%;
+    margin: auto;
+}
+
+.calendar img{
+    width: 100%;
 }
 
 .git-calander {

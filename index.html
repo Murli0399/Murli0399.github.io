@@ -5,8 +5,6 @@
     <link rel="icon" href="img/logo1.png" type="image/icon type" />
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./nav.css" />
-    <link rel="stylesheet"
-    href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css"/>
   </head>
 
   <body>
@@ -183,10 +181,9 @@
 
     <section id="github">
       <h1>Github Calendar</h1>
-      <!-- <div class="react-activity-calendar calendar"></div> -->
+      
       <div class="calendar">
-        <!-- Loading stuff -->
-        Loading the data just for you.
+        <img src="https://ghchart.rshah.org/Murli0399" alt="Github Calander" />
       </div>
       <div class="git-calander">
         <img
@@ -407,6 +404,7 @@
     <footer>
       <p>Designed by <span>Murli Khaire</span></p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/github-calendar@2.1.0/dist/github-calendar.min.js"></script>
 
     <!-- Import JS: Particles Theme -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -417,9 +415,7 @@
     <script src="./script/main.js"></script>
 
     <script src="./script/nav.js" type="module"></script>
-    <script
-      ssrc="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"
-    ></script>
+
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script/email.js"></script>
   </body>
@@ -445,16 +441,6 @@
     function email() {
       window.open("murlikhaire28@gmail.com", "_blank");
     }
-    // GitHubCalendar(".calendar", "Murli0399");
-
-    // or enable responsive functionality:
-    // GitHubCalendar(".calendar", "Murli0399", { responsive: true });
-
-    // Use a proxy
-    GitHubCalendar(".calendar", "Murli0399", {
-       proxy (username) {
-         return fetch(`https://your-proxy.com/github?user=${Murli0399}`)
-       }
-    }).then(r => r.text())
+    
   </script>
 </html>
