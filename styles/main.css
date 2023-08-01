@@ -243,7 +243,7 @@ section h1 {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     text-align: center;
     padding: 40px 20px;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 #contact {
@@ -317,7 +317,7 @@ textarea {
 
 .contact-icon {
     width: 25%;
-    border-radius: 25px;
+    border-radius: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     padding: 20px;
 }
@@ -382,6 +382,17 @@ footer p span {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     padding: 20px;
     margin: 60px auto;
+    cursor: pointer;
+}
+
+#projects .project-card:hover{
+    transition: .6s;
+    background: #0c326c;
+    color: #ffffff;
+}
+
+#projects .project-card:hover .description{
+    color: #ffffff;
 }
 
 #slideshow1 {

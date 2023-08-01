@@ -18,3 +18,11 @@ function send() {
     msg => alert("Your message send successfully")
   );
 }
+
+  // typing text animation script
+  var typed = new Typed(".typing", {
+    strings: ["Full Stack Developer", "Java Backend Developer"],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true,
+  });
