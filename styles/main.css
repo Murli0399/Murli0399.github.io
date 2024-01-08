@@ -385,13 +385,13 @@ footer p span {
     cursor: pointer;
 }
 
-#projects .project-card:hover{
+#projects .project-card:hover {
     transition: .6s;
     background: #0c326c;
     color: #ffffff;
 }
 
-#projects .project-card:hover .description{
+#projects .project-card:hover .description {
     color: #ffffff;
 }
 
@@ -472,7 +472,7 @@ footer p span {
     margin: auto;
 }
 
-.calendar img{
+.calendar img {
     width: 100%;
 }
 
@@ -483,6 +483,60 @@ footer p span {
     margin-top: 20px;
 }
 
+/* --------------------------- */
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+}
+
+.wrapper .slider {
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 90%;
+}
+
+.wrapper .slider .slide-track {
+    -webkit-animation: scroll 40s linear infinite;
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+
+.wrapper .slider .slide {
+    width: 200px;
+    text-align: center;
+}
+
+.wrapper .slider .slide img {
+    width: 80px;
+}
+
+@-webkit-keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+
+/* --------------------------- */
 @media only screen and (max-width: 980px) {
 
     .header {

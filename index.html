@@ -38,7 +38,7 @@
           </li>
           <li>
             <a
-              href="img/Murli_Khaire_Resume.pdf"
+              href="img/Murli-Khaire-Resume.pdf"
               target="_blank"
               download="Murli-Khaire-Resume"
               onclick="window.open('https://drive.google.com/file/d/1E1Q4sLGpW4Qb-ZkE73UGDsjqUlrWKTGW/view?usp=sharing')"
@@ -56,13 +56,15 @@
           <h1>
             <div class="site-question">Hi, my name is</div>
             <div id="user-detail-name" class="site-title">Murli Khaire</div>
-            <div id="user-detail-intro" class="site-description"><span class="typing"></span></div>
+            <div id="user-detail-intro" class="site-description">
+              <span class="typing"></span>
+            </div>
           </h1>
           <div class="header-icons">
             <a
               class="resumeClass nav-link resume"
               id="resume-link-2"
-              href="img/Murli_Khaire_Resume.pdf"
+              href="img/Murli-Khaire-Resume.pdf"
               target="_blank"
               download="Murli-Khaire-Resume"
               onclick="window.open('https://drive.google.com/file/d/1E1Q4sLGpW4Qb-ZkE73UGDsjqUlrWKTGW/view?usp=sharing')"
@@ -175,31 +177,6 @@
           <img class="skills-card-img" src="img/visual-studio.png" alt="" />
           <p class="skills-card-name">VS Code</p>
         </div>
-      </div>
-    </section>
-
-    <section id="github">
-      <h1>Github Calendar</h1>
-      
-      <div class="calendar">
-        <img src="https://ghchart.rshah.org/Murli0399" alt="Github Calander" />
-      </div>
-      <div class="git-calander">
-        <img
-          id="github-streak-stats"
-          src="https://github-readme-streak-stats.herokuapp.com?user=Murli0399&theme=dark"
-          alt=""
-        />
-        <img
-          id="github-top-langs"
-          src="https://github-readme-stats.vercel.app/api?username=Murli0399&show_icons=true&theme=dark#gh-dark-mode-only"
-          alt=""
-        />
-        <img
-          id="github-stats-card"
-          src="https://github-readme-stats.vercel.app/api/top-langs/?username=Murli0399&hide_progress=true&theme=dark#gh-dark-mode-only"
-          alt=""
-        />
       </div>
     </section>
 
@@ -333,6 +310,84 @@
       </div>
     </section>
 
+    <section id="github">
+      <h1>Github Calendar</h1>
+
+      <div class="calendar">
+        <img src="https://ghchart.rshah.org/Murli0399" alt="Github Calander" />
+      </div>
+      <div class="git-calander">
+        <img
+          id="github-streak-stats"
+          src="https://github-readme-streak-stats.herokuapp.com?user=Murli0399&theme=dark"
+          alt=""
+        />
+        <img
+          id="github-top-langs"
+          src="https://github-readme-stats.vercel.app/api?username=Murli0399&show_icons=true&theme=dark#gh-dark-mode-only"
+          alt=""
+        />
+        <img
+          id="github-stats-card"
+          src="https://github-readme-stats.vercel.app/api/top-langs/?username=Murli0399&hide_progress=true&theme=dark#gh-dark-mode-only"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <div class="wrapper">
+      <div class="slider">
+        <div class="slide-track">
+          <div class="slide">
+            <img src="img/java.png" alt="" />
+          </div>
+
+          <div class="slide">
+            <img src="img/python.png" alt="" />
+          </div>
+          
+          <div class="slide">
+            <img src="img/icons8-flask-500.png" alt="" />
+          </div>
+
+
+          <div class="slide">
+            <img src="img/css-3.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/dsa.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/js.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/html-5.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/css-3.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/spring-boot-logo.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/spring-boot.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/swagger_logo-modified.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/github-sign.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/visual-studio.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/postman.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Contact Section -->
     <section id="contact">
       <h1>Contact me</h1>
@@ -417,9 +472,6 @@
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script/email.js"></script>
- 
- 
-  
   </body>
 
   <script>
@@ -428,6 +480,7 @@
     }
 
     function resumeFun() {
+      console.log("Download")
       location.href =
         "https://drive.google.com/uc?id=1E1Q4sLGpW4Qb-ZkE73UGDsjqUlrWKTGW&export=download";
     }
@@ -443,6 +496,5 @@
     function email() {
       window.open("murlikhaire28@gmail.com", "_blank");
     }
-    
   </script>
 </html>
