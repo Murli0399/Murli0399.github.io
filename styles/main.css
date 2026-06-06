@@ -244,6 +244,175 @@ section h1 {
 }
 
 
+/* ===== Experience Section ===== */
+#experience {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#experience h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.experience-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  box-shadow: 0 0 30px rgba(167, 139, 250, 0.15);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.experience-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.company-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  object-fit: contain;
+  background: rgba(255,255,255,0.08);
+  padding: 6px;
+}
+
+.experience-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.company-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  color: #e2e8f0;
+}
+
+.company-tag {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #a78bfa;
+  background: rgba(167, 139, 250, 0.1);
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  border-radius: 20px;
+  padding: 2px 10px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.role-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.experience-location {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.duration-badge {
+  background: rgba(167, 139, 250, 0.15);
+  border: 1px solid rgba(167, 139, 250, 0.4);
+  color: #a78bfa;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.experience-summary {
+  border-left: 3px solid #a78bfa;
+  padding-left: 1rem;
+  margin-bottom: 1.8rem;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.experience-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.highlight-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.highlight-icon {
+  font-size: 1.3rem;
+  min-width: 28px;
+  margin-top: 2px;
+}
+
+.highlight-item strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  margin-bottom: 0.2rem;
+}
+
+.highlight-item p {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.experience-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.tech-pill {
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: #a5b4fc;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .experience-header {
+    flex-direction: column;
+  }
+  .duration-badge {
+    align-self: flex-start;
+  }
+}
+
+
 /* contact form css here  */
 
 #form {
