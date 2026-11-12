@@ -1,598 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Portfolio | Murli Khaire</title>
-    <link rel="icon" href="img/logo1.png" type="image/icon type" />
-    <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./nav.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Murli Khaire | Backend Engineer</title>
+    <meta
+      name="description"
+      content="Murli Khaire – Backend Engineer at ConvoZen.ai building Java, Spring Boot and Kafka systems and AI/LLM pipelines that process 800K+ calls a day."
+    />
+    <meta property="og:title" content="Murli Khaire | Backend Engineer" />
+    <meta
+      property="og:description"
+      content="Java · Spring Boot · Kafka · AI/LLM pipelines at ConvoZen.ai"
+    />
+    <meta property="og:image" content="https://murli0399.github.io/img/profile.jpg" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="img/logo1.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
 
   <body>
-    <nav class="nav" id="nav-menu">
-      <div class="container">
-        <div class="logo">
-          <img src="img/logo1.png" onclick="homePage()" alt="" />
-        </div>
-        <ul>
-          <li><a href="index.html" class="current nav-link home">Home</a></li>
-          <li>
-            <a class="link nav-link about" href="#about" data-scroll
-              >About Me</a
-            >
-          </li>
-          <li>
-            <a class="link nav-link" href="#experience" data-scroll>Experience</a>
-          </li>
-          <li>
-            <a class="link nav-link skills" href="#skills" data-scroll
-              >Skills</a
-            >
-          </li>
-          <li>
-            <a class="link nav-link projects" href="#projects" data-scroll
-              >Projects</a
-            >
-          </li>
-          <li>
-            <a class="link nav-link contact" href="#contact" data-scroll
-              >Contact</a
-            >
-          </li>
-          <li>
-            <a
-              href="img/Murli-Khaire-Resume.pdf"
-              target="_blank"
-              download="Murli-Khaire-Resume"
-              onclick="window.open('https://drive.google.com/file/d/1E1Q4sLGpW4Qb-ZkE73UGDsjqUlrWKTGW/view?usp=sharing')"
-              id="resume-link-1"
-              class="link nav-link"
-              >Resume</a
-            >
-          </li>
-        </ul>
+    <!-- Navigation -->
+    <header class="nav" id="nav-menu">
+      <div class="container nav-inner">
+        <a href="#home" class="logo" aria-label="Home">
+          <span class="logo-mark">MK</span>
+          <span class="logo-text">Murli Khaire</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#home" class="nav-link home">Home</a></li>
+            <li><a href="#about" class="nav-link about">About</a></li>
+            <li><a href="#experience" class="nav-link experience">Experience</a></li>
+            <li><a href="#skills" class="nav-link skills">Skills</a></li>
+            <li><a href="#projects" class="nav-link projects">Projects</a></li>
+            <li><a href="#contact" class="nav-link contact">Contact</a></li>
+            <li>
+              <a
+                href="img/Murli-Khaire-Resume.pdf"
+                target="_blank"
+                rel="noopener"
+                id="resume-button-1"
+                class="nav-link resume btn btn-small"
+                >Resume</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
-    </nav>
-    <div id="particles-js">
-      <div class="header" id="home">
-        <div class="header-flex">
-          <h1>
-            <div class="site-question">Hi, my name is</div>
-            <div id="user-detail-name" class="site-title">Murli Khaire</div>
-            <div class="site-role">Backend Engineer · AI/LLM Systems · ConvoZen.ai</div>
-            <div id="user-detail-intro" class="site-description">
-              <span class="typing"></span>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero" id="home">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container hero-inner">
+          <div class="hero-text reveal">
+            <p class="eyebrow"><span class="status-dot"></span> SDE @ ConvoZen.ai · Bangalore</p>
+            <h1 id="user-detail-name">
+              Hi, I'm <span class="gradient-text">Murli Khaire</span>
+            </h1>
+            <p class="hero-role">
+              I build <span class="typed" id="typed" aria-live="polite">scalable backend systems</span><span class="cursor">|</span>
+            </p>
+            <p class="hero-sub" id="user-detail-intro">
+              Backend engineer working with Java, Spring Boot and Kafka. I build the platform that
+              processes <strong>800K+ calls a day</strong> for 20+ enterprise clients, along with
+              the AI/LLM pipelines that turn those calls into insights.
+            </p>
+            <div class="hero-cta">
+              <a href="#projects" class="btn btn-primary">View my work</a>
+              <a
+                href="img/Murli-Khaire-Resume.pdf"
+                target="_blank"
+                rel="noopener"
+                id="resume-button-2"
+                class="btn btn-ghost resume"
+                >Download resume</a
+              >
             </div>
-          </h1>
-          <div class="header-icons">
-            <a
-              class="resumeClass nav-link resume"
-              id="resume-link-2"
-              href="img/Murli-Khaire-Resume.pdf"
-              target="_blank"
-              download="Murli-Khaire-Resume"
-              onclick="window.open('https://drive.google.com/file/d/1E1Q4sLGpW4Qb-ZkE73UGDsjqUlrWKTGW/view?usp=sharing')"
-              >Resume
-              <img src="img/pdf.png" alt="" />
+            <div class="hero-social">
+              <a href="https://github.com/Murli0399" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.3 1.9 1.3 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.4 18.3 4.7 18.3 4.7c.7 1.7.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/murli-khaire/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24"><path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.1ZM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2ZM7.1 20.4H3.5V9h3.6v11.4ZM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0Z"/></svg>
+              </a>
+              <a href="mailto:murlikhaire28@gmail.com" aria-label="Email">
+                <svg viewBox="0 0 24 24"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.3-.5 7.7 6 7.7-6H4.3ZM20 6.6l-7.4 5.8a1 1 0 0 1-1.2 0L4 6.6v11.9c0 .3.2.5.5.5h15c.3 0 .5-.2.5-.5V6.6Z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="code-card">
+              <div class="code-card-bar">
+                <span></span><span></span><span></span>
+                <p>MurliKhaire.java</p>
+              </div>
+<pre><code><span class="k">public class</span> <span class="t">MurliKhaire</span> {
+  <span class="t">String</span> role = <span class="s">"Backend Engineer"</span>;
+  <span class="t">String</span> company = <span class="s">"ConvoZen.ai"</span>;
+  <span class="t">String</span>[] stack = {
+    <span class="s">"Java"</span>, <span class="s">"Spring Boot"</span>, <span class="s">"Kafka"</span>,
+    <span class="s">"Redis"</span>, <span class="s">"Kubernetes"</span>, <span class="s">"GCP"</span>
+  };
+  <span class="t">long</span> callsPerDay = <span class="n">800_000</span>;
+
+  <span class="k">boolean</span> <span class="f">isOpenToChat</span>() {
+    <span class="k">return</span> <span class="k">true</span>;
+  }
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="stats reveal">
+            <div class="stat"><span class="stat-num">800K+</span><span class="stat-label">calls processed / day</span></div>
+            <div class="stat"><span class="stat-num">99.9%</span><span class="stat-label">platform uptime</span></div>
+            <div class="stat"><span class="stat-num">20+</span><span class="stat-label">enterprise clients</span></div>
+            <div class="stat"><span class="stat-num">70%</span><span class="stat-label">infra cost reduction</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="section about" id="about">
+        <div class="container about-grid">
+          <div class="about-photo reveal">
+            <img src="img/profile.jpg" alt="Murli Khaire" class="home-img" width="320" height="320" />
+          </div>
+          <div class="about-text reveal">
+            <p class="section-kicker">About me</p>
+            <h2 class="section-title">Backend engineer who likes hard, high-volume problems</h2>
+            <p>
+              I'm a Software Development Engineer at <strong>ConvoZen.ai</strong>, NoBroker's AI
+              subsidiary, where I build a conversation-intelligence platform used by enterprise
+              clients in automotive, edtech, real estate and BFSI.
+            </p>
+            <p>
+              My work covers the whole backend: multi-tenant Spring Boot services, Kafka event
+              pipelines on Kubernetes (GCP), authentication and RBAC, and LLM integrations with
+              Google Gemini and Azure OpenAI for summaries, sentiment, intent detection and RAG
+              chatbots.
+            </p>
+            <p>
+              I care about clean architecture, measurable results and systems that keep running in
+              production. Outside work I share free interview-prep material for Java, Spring Boot
+              and system design on GitHub.
+            </p>
+            <ul class="about-facts">
+              <li><span>📍</span> Bangalore, India</li>
+              <li><span>💼</span> 3 years in backend development</li>
+              <li><span>🎓</span> BCA, MCU Bhopal · Full Stack, Masai School</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="section" id="experience">
+        <div class="container">
+          <p class="section-kicker reveal">Experience</p>
+          <h2 class="section-title reveal">Where I've worked</h2>
+
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="card experience-card">
+                <div class="experience-head">
+                  <div>
+                    <h3>Software Development Engineer – Backend</h3>
+                    <p class="company">ConvoZen.ai <span class="tag">NoBroker's AI subsidiary</span></p>
+                  </div>
+                  <span class="badge">Apr 2024 – Present · Bangalore</span>
+                </div>
+                <ul class="experience-points">
+                  <li><strong>Platform V2:</strong> helped re-architect the platform, consolidating 300+ Kafka topics into a clean routing system using CQRS, event sourcing and saga orchestration.</li>
+                  <li><strong>Multi-tenant backend:</strong> built a unified Spring Boot backend that replaced per-client Django instances, cutting infrastructure cost by 70%.</li>
+                  <li><strong>Call pipeline:</strong> designed a Kafka-based call-analysis pipeline on Kubernetes with autoscaling that processes 800K+ calls a day, with priority queues for time-sensitive clients.</li>
+                  <li><strong>Job server:</strong> built a multithreaded job server with Spring Boot and Kafka; better consumer-group partitioning and parallel batches improved efficiency by 60%.</li>
+                  <li><strong>Auth and security:</strong> built authentication from scratch with JWT, Redis-backed sessions, OAuth2 + PKCE and three-tier RBAC for enterprise accounts.</li>
+                  <li><strong>AI and speech:</strong> multi-speaker transcription with Conformer models and Whisper fallback; summaries, sentiment and intent detection with Gemini and Azure OpenAI, cutting LLM API costs by 40% through batching.</li>
+                  <li><strong>RAG products:</strong> a Customer Insights bot for querying call transcripts in natural language, and a RAG WhatsApp chatbot for the Odisha government.</li>
+                </ul>
+                <div class="pills">
+                  <span>Java</span><span>Spring Boot</span><span>Kafka</span><span>Redis</span><span>Kubernetes</span><span>GCP</span><span>MongoDB</span><span>Elasticsearch</span><span>Gemini</span><span>Azure OpenAI</span><span>RAG</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="card experience-card">
+                <div class="experience-head">
+                  <div>
+                    <h3>Full Stack Web Developer (Intern)</h3>
+                    <p class="company">Masai School</p>
+                  </div>
+                  <span class="badge">Oct 2023 – Mar 2024 · Bangalore</span>
+                </div>
+                <ul class="experience-points">
+                  <li>Built backend features and REST APIs for the Masai School student platform with Java and Spring Boot, covering API design, database integration and frontend screens.</li>
+                </ul>
+                <div class="pills"><span>Java</span><span>Spring Boot</span><span>MySQL</span><span>REST APIs</span><span>JavaScript</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section" id="skills">
+        <div class="container">
+          <p class="section-kicker reveal">Skills</p>
+          <h2 class="section-title reveal">Tools I use to build things</h2>
+
+          <div class="skills-grid">
+            <div class="card skill-group reveal">
+              <h3>⚙️ Backend</h3>
+              <div class="skill-icons">
+                <div class="skills-card"><img class="skills-card-img" src="https://skillicons.dev/icons?i=java" alt="" loading="lazy" /><p class="skills-card-name">Java</p></div>
+                <div class="skills-card"><img class="skills-card-img" src="https://skillicons.dev/icons?i=spring" alt="" loading="lazy" /><p class="skills-card-name">Spring Boot</p></div>
+                <div class="skills-card"><img class="skills-card-img" src="https://skillicons.dev/icons?i=hibernate" alt="" loading="lazy" /><p class="skills-card-name">Hibernate</p></div>
+                <div class="skills-card"><img class="skills-card-img" src="https://skillicons.dev/icons?i=python" alt="" loading="lazy" /><p class="skills-card-name">Python</p></div>
+                <div class="skills-card"><img class="skills-card-img" src="https://skillicons.dev/icons?i=flask" alt="" loading="lazy" /><p class="skills-card-name">Flask</p></div>
+                <div class="skills-card"><img class="skills-card-img" src="https://skillicons.dev/icons?i=graphql" alt="" loading="lazy" /><p class="skills-card-name">GraphQL</p></div>
+                <div class="skills-card"><img class="skills-card-img" src="https://skillicons.dev/icons?i=maven" alt="" loading="lazy" /><p class="skills-card-name">Maven</p></div>
+                <div class="skills-card"><img class="skills-card-img" src="https://skillicons.dev/icons?i=bash" alt="" loading="lazy" /><p class="skills-card-name">Bash</p></div>
+              </div>
+            </div>
+
+            <div class="card skill-group reveal">
+              <h3>🗄️ Data and messaging</h3>
+              <div class="skill-icons">
+                <div class="skills-card"><img class="skills-card-img" src="https://skillicons.dev/icons?i=kafka" alt="" loading="lazy" /><p class="skills-card-name">Kafka</p></div>
+                <div class="skills-card"><img class="skills-card-img" src="https://skillicons.dev/icons?i=redis" alt="" loading="lazy" /><p class="skills-card-name">Redis</p></div>
+                <div class="skills-card"><img class="skills-card-img" src="https://skillicons.dev/icons?i=mysql" alt="" loading="lazy" /><p class="skills-card-name">MySQL</p></div>
+                <div class="skills-card"><img class="skills-card-img" src="https://skillicons.dev/icons?i=mongodb" alt="" loading="lazy" /><p class="skills-card-name">MongoDB</p></div>
+                <div class="skills-card"><img class="skills-card-img" src="https://skillicons.dev/icons?i=elasticsearch" alt="" loading="lazy" /><p class="skills-card-name">Elasticsearch</p></div>
+              </div>
+            </div>
+
+            <div class="card skill-group reveal">
+              <h3>☁️ Cloud and DevOps</h3>
+              <div class="skill-icons">
+                <div class="skills-card"><img class="skills-card-img" src="https://skillicons.dev/icons?i=gcp" alt="" loading="lazy" /><p class="skills-card-name">GCP</p></div>
+                <div class="skills-card"><img class="skills-card-img" src="https://skillicons.dev/icons?i=kubernetes" alt="" loading="lazy" /><p class="skills-card-name">Kubernetes</p></div>
+                <div class="skills-card"><img class="skills-card-img" src="https://skillicons.dev/icons?i=docker" alt="" loading="lazy" /><p class="skills-card-name">Docker</p></div>
+                <div class="skills-card"><img class="skills-card-img" src="https://skillicons.dev/icons?i=prometheus" alt="" loading="lazy" /><p class="skills-card-name">Prometheus</p></div>
+                <div class="skills-card"><img class="skills-card-img" src="https://skillicons.dev/icons?i=grafana" alt="" loading="lazy" /><p class="skills-card-name">Grafana</p></div>
+                <div class="skills-card"><img class="skills-card-img" src="https://skillicons.dev/icons?i=linux" alt="" loading="lazy" /><p class="skills-card-name">Linux</p></div>
+                <div class="skills-card"><img class="skills-card-img" src="https://skillicons.dev/icons?i=git" alt="" loading="lazy" /><p class="skills-card-name">Git</p></div>
+                <div class="skills-card"><img class="skills-card-img" src="https://skillicons.dev/icons?i=postman" alt="" loading="lazy" /><p class="skills-card-name">Postman</p></div>
+              </div>
+            </div>
+
+            <div class="card skill-group reveal">
+              <h3>🤖 AI and architecture</h3>
+              <div class="pills pills-lg">
+                <span>Google Gemini</span><span>Azure OpenAI</span><span>Vertex AI</span><span>RAG</span>
+                <span>Speech-to-text</span><span>Sentence Transformers</span><span>Microservices</span>
+                <span>CQRS</span><span>Event Sourcing</span><span>Saga Orchestration</span>
+                <span>OAuth2 + PKCE</span><span>RBAC</span><span>Multithreading</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="section" id="projects">
+        <div class="container">
+          <p class="section-kicker reveal">Projects</p>
+          <h2 class="section-title reveal">Things I've built</h2>
+
+          <h3 class="sub-title reveal">At work · ConvoZen.ai</h3>
+          <div class="work-grid">
+            <article class="card work-card reveal">
+              <span class="work-icon">⚡</span>
+              <h4>Call analysis pipeline</h4>
+              <p>Kafka pipeline on Kubernetes with autoscaling and priority queues, processing 800K+ calls a day from audio to insights.</p>
+              <div class="pills"><span>Kafka</span><span>Kubernetes</span><span>Spring Boot</span></div>
+            </article>
+            <article class="card work-card reveal">
+              <span class="work-icon">🏢</span>
+              <h4>Multi-tenant platform</h4>
+              <p>One Spring Boot backend for all enterprise clients, replacing per-client deployments and cutting infra cost by 70%.</p>
+              <div class="pills"><span>Spring Boot</span><span>MySQL</span><span>Redis</span></div>
+            </article>
+            <article class="card work-card reveal">
+              <span class="work-icon">🔐</span>
+              <h4>Auth and RBAC</h4>
+              <p>Authentication built from scratch: JWT, Redis sessions, OAuth2 with PKCE and three-tier role-based access control.</p>
+              <div class="pills"><span>OAuth2</span><span>JWT</span><span>Redis</span></div>
+            </article>
+            <article class="card work-card reveal">
+              <span class="work-icon">🧠</span>
+              <h4>RAG insights bots</h4>
+              <p>Natural-language questions over call transcripts, plus a RAG WhatsApp chatbot for the Odisha government.</p>
+              <div class="pills"><span>Gemini</span><span>RAG</span><span>Vector search</span></div>
+            </article>
+          </div>
+
+          <h3 class="sub-title reveal">Open source · interview prep</h3>
+          <div class="repo-grid">
+            <a class="card repo-card reveal" href="https://github.com/Murli0399/Java_Interview_Question" target="_blank" rel="noopener">
+              <div class="repo-top"><span class="repo-emoji">☕</span><span class="repo-count">369 Q</span></div>
+              <h4>Java Interview Questions</h4>
+              <p>Core Java, OOP, collections, multithreading, JVM, Java 8–21, DSA with LeetCode links, and LLD.</p>
+              <span class="repo-link">View on GitHub →</span>
+            </a>
+            <a class="card repo-card reveal" href="https://github.com/Murli0399/SpringBoot_Interview_Questions" target="_blank" rel="noopener">
+              <div class="repo-top"><span class="repo-emoji">🌱</span><span class="repo-count">242 Q</span></div>
+              <h4>Spring Boot Interview Questions</h4>
+              <p>IoC/DI, Boot 3/4, JPA and transactions, REST, Spring Security, microservices with Kafka, testing.</p>
+              <span class="repo-link">View on GitHub →</span>
+            </a>
+            <a class="card repo-card reveal" href="https://github.com/Murli0399/System_Design_Interview_Questions" target="_blank" rel="noopener">
+              <div class="repo-top"><span class="repo-emoji">🏗️</span><span class="repo-count">217 Q</span></div>
+              <h4>System Design Interview Questions</h4>
+              <p>Caching, sharding, CAP, sagas, rate limiting, plus 14 HLD case studies with diagrams.</p>
+              <span class="repo-link">View on GitHub →</span>
             </a>
           </div>
-        </div>
-        <div class="programmer">
-          <img class="home-img" src="img/programmerCrop.png" alt="" />
-        </div>
-      </div>
-    </div>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-      <!-- User Introduction-->
-      <h1>About Me</h1>
-      <div class="user-details">
-        <picture>
-          <img
-            type="image/webp"
-            class="home-img"
-            srcset="./img/mk.jpg"
-            alt="Professional Me"
-          />
-        </picture>
-        <p id="user-detail-intro">
-          Backend Engineer at ConvoZen.ai (NoBroker's AI subsidiary), building
-          distributed systems that process 800K+ calls/day. I work across the full
-          backend stack — Java, Spring Boot, Kafka — and integrate LLM pipelines
-          using Azure OpenAI and Google Gemini. I care about clean architecture,
-          scalable design, and shipping things that actually work in production.
-        </p>
-      </div>
-    </section>
+          <h3 class="sub-title reveal">Personal projects</h3>
+          <div class="project-grid">
+            <article class="card project-card reveal">
+              <img src="img/Recipe/recipe.jpg" alt="Recipe application" loading="lazy" />
+              <div class="project-body">
+                <h4 class="project-title">Recipe Management API</h4>
+                <p class="project-description">REST API for online recipe management with authentication, custom exception handling and validation.</p>
+                <p class="project-tech-stack">Java · Spring Boot · Hibernate · MySQL</p>
+                <div class="project-links">
+                  <a href="https://github.com/Murli0399/Online-Recipe-System" target="_blank" rel="noopener" class="project-github-link">Code</a>
+                  <a href="https://github.com/Murli0399/Online-Recipe-System#readme" target="_blank" rel="noopener" class="project-deployed-link">Docs</a>
+                </div>
+              </div>
+            </article>
+            <article class="card project-card reveal">
+              <img src="img/auction/auctionsys.png" alt="Automated auction system" loading="lazy" />
+              <div class="project-body">
+                <h4 class="project-title">Automated Auction System</h4>
+                <p class="project-description">Console application where registered buyers and sellers bid on and sell products, with an admin for auction companies.</p>
+                <p class="project-tech-stack">Java · JDBC · Maven · MySQL</p>
+                <div class="project-links">
+                  <a href="https://github.com/Murli0399/Automated-Auction-System" target="_blank" rel="noopener" class="project-github-link">Code</a>
+                  <a href="https://github.com/Murli0399/Automated-Auction-System#readme" target="_blank" rel="noopener" class="project-deployed-link">Docs</a>
+                </div>
+              </div>
+            </article>
+            <article class="card project-card reveal">
+              <img src="img/quickdeals/Home-Page.png" alt="QuickDeals e-commerce site" loading="lazy" />
+              <div class="project-body">
+                <h4 class="project-title">QuickDeals</h4>
+                <p class="project-description">E-commerce site inspired by Gearbest with home, sign-up/login, product, cart and payment pages.</p>
+                <p class="project-tech-stack">HTML · CSS · JavaScript</p>
+                <div class="project-links">
+                  <a href="https://github.com/Murli0399/quixotic-vest-9795" target="_blank" rel="noopener" class="project-github-link">Code</a>
+                  <a href="https://quickdeals.netlify.app/" target="_blank" rel="noopener" class="project-deployed-link">Live</a>
+                </div>
+              </div>
+            </article>
+            <article class="card project-card reveal">
+              <img src="img/take-a-trip.png" alt="Take-A-Trip travel booking site" loading="lazy" />
+              <div class="project-body">
+                <h4 class="project-title">Take-A-Trip</h4>
+                <p class="project-description">Travel booking site for flights, hotels, trains and holiday packages, inspired by MakeMyTrip.</p>
+                <p class="project-tech-stack">HTML · CSS · JavaScript</p>
+                <div class="project-links">
+                  <a href="https://github.com/Murli0399/purple-crook-1402" target="_blank" rel="noopener" class="project-github-link">Code</a>
+                  <a href="https://clone-of-mmt.netlify.app/" target="_blank" rel="noopener" class="project-deployed-link">Live</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-      <h1>Technical Skills</h1>
-      <div class="user-skills">
-        <!-- Core Backend -->
-        <div class="skills-card">
-          <img class="skills-card-img" src="img/java.png" alt="" />
-          <p class="skills-card-name">Java</p>
+      <!-- GitHub -->
+      <section class="section" id="github">
+        <div class="container">
+          <p class="section-kicker reveal">GitHub</p>
+          <h2 class="section-title reveal">Contribution activity</h2>
+          <div class="card github-card reveal">
+            <img class="calendar" src="https://ghchart.rshah.org/7F77DD/Murli0399" alt="GitHub contribution calendar" loading="lazy" />
+          </div>
+          <div class="github-stats reveal">
+            <img id="github-streak-stats" src="https://streak-stats.demolab.com/?user=Murli0399&theme=tokyonight&hide_border=true&background=00000000" alt="GitHub streak" loading="lazy" onerror="this.remove()" />
+            <img id="github-stats-card" src="https://raw.githubusercontent.com/Murli0399/Murli0399/main/profile-summary-card-output/tokyonight/3-stats.svg" alt="GitHub stats" loading="lazy" onerror="this.remove()" />
+            <img id="github-top-langs" src="https://raw.githubusercontent.com/Murli0399/Murli0399/main/profile-summary-card-output/tokyonight/2-most-commit-language.svg" alt="Top languages" loading="lazy" onerror="this.remove()" />
+          </div>
         </div>
-        <div class="skills-card">
-          <img class="skills-card-img" src="img/spring-boot-logo.png" alt="" />
-          <p class="skills-card-name">Spring Boot</p>
-        </div>
-        <div class="skills-card">
-          <img class="skills-card-img" src="img/spring-boot.png" alt="" />
-          <p class="skills-card-name">Spring</p>
-        </div>
-        <div class="skills-card">
-          <img class="skills-card-img" src="img/hibernate-icon.svg" alt="" />
-          <p class="skills-card-name">Hibernate</p>
-        </div>
-        <div class="skills-card">
-          <img class="skills-card-img" src="img/maven.png" alt="" />
-          <p class="skills-card-name">Maven</p>
-        </div>
-      
-        <!-- Messaging & Distributed -->
-        <div class="skills-card">
-          <img class="skills-card-img" src="https://skillicons.dev/icons?i=kafka" alt="" />
-          <p class="skills-card-name">Kafka</p>
-        </div>
-        <div class="skills-card">
-          <img class="skills-card-img" src="https://skillicons.dev/icons?i=redis" alt="" />
-          <p class="skills-card-name">Redis</p>
-        </div>
-      
-        <!-- AI & Cloud -->
-        <div class="skills-card">
-          <img class="skills-card-img" src="https://skillicons.dev/icons?i=azure" alt="" />
-          <p class="skills-card-name">Azure</p>
-        </div>
-        <div class="skills-card">
-          <img class="skills-card-img" src="img/python.png" alt="" />
-          <p class="skills-card-name">Python</p>
-        </div>
-        <div class="skills-card">
-          <img class="skills-card-img" src="img/icons8-flask-500.png" alt="" />
-          <p class="skills-card-name">Flask</p>
-        </div>
-      
-        <!-- Databases -->
-        <div class="skills-card">
-          <img class="skills-card-img" src="img/mysql (1).png" alt="" />
-          <p class="skills-card-name">MySQL</p>
-        </div>
-        <div class="skills-card">
-          <img class="skills-card-img" src="https://skillicons.dev/icons?i=mongodb" alt="" />
-          <p class="skills-card-name">MongoDB</p>
-        </div>
-      
-        <!-- DevOps & Tools -->
-        <div class="skills-card">
-          <img class="skills-card-img" src="https://skillicons.dev/icons?i=docker" alt="" />
-          <p class="skills-card-name">Docker</p>
-        </div>
-        <div class="skills-card">
-          <img class="skills-card-img" src="img/github.png" alt="" />
-          <p class="skills-card-name">GitHub</p>
-        </div>
-        <div class="skills-card">
-          <img class="skills-card-img" src="img/postman.png" alt="" />
-          <p class="skills-card-name">Postman</p>
-        </div>
-        <div class="skills-card">
-          <img class="skills-card-img" src="img/restful.png" alt="" />
-          <p class="skills-card-name">REST APIs</p>
-        </div>
-      
-      </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
-      <h1>Experience</h1>
-    
-      <div class="experience-card">
-        <div class="experience-header">
-          <div class="experience-left">
-            <img src="img/logo1.png" alt="ConvoZen.ai" class="company-logo" />
-            <div class="experience-meta">
-              <h3 class="company-name">ConvoZen.ai <span class="company-tag">NoBroker's AI Subsidiary</span></h3>
-              <h4 class="role-title">Software Development Engineer (SDE)</h4>
-              <p class="experience-location">📍 Bangalore, India</p>
+      <!-- Contact -->
+      <section class="section" id="contact">
+        <div class="container">
+          <p class="section-kicker reveal">Contact</p>
+          <h2 class="section-title reveal">Let's talk</h2>
+          <div class="contact-grid">
+            <div class="contact-info reveal">
+              <p>
+                Open to backend engineering roles and conversations about distributed systems,
+                Kafka and LLM pipelines. The fastest way to reach me is email or LinkedIn.
+              </p>
+              <a class="contact-item" id="contact-email" href="mailto:murlikhaire28@gmail.com">
+                <span class="contact-icon">✉️</span><span>murlikhaire28@gmail.com</span>
+              </a>
+              <a class="contact-item" id="contact-phone" href="tel:+918462858556">
+                <span class="contact-icon">📞</span><span>+91 84628-58556</span>
+              </a>
+              <a class="contact-item" id="contact-linkedin" href="https://www.linkedin.com/in/murli-khaire/" target="_blank" rel="noopener">
+                <span class="contact-icon">💼</span><span>linkedin.com/in/murli-khaire</span>
+              </a>
+              <a class="contact-item" id="contact-github" href="https://github.com/Murli0399" target="_blank" rel="noopener">
+                <span class="contact-icon">🐙</span><span>github.com/Murli0399</span>
+              </a>
             </div>
-          </div>
-          <div class="experience-duration">
-            <span class="duration-badge">2023 – Present</span>
+
+            <form class="card contact-form reveal" id="contact-form">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" placeholder="Your name" required />
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" placeholder="you@example.com" required />
+              <label for="message">Message</label>
+              <textarea name="message" id="message" rows="5" placeholder="How can I help?" required></textarea>
+              <input type="hidden" name="_subject" value="New message from your portfolio" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" />
+              <button type="submit" class="btn btn-primary" id="form-submit">Send message</button>
+              <p class="form-status" id="form-status" role="status"></p>
+            </form>
           </div>
         </div>
-    
-        <div class="experience-summary">
-          <p>
-            Building the backend infrastructure for a conversation intelligence platform
-            that processes <strong>800K+ calls/day</strong>. Work spans distributed system
-            design, real-time speech processing pipelines, LLM integrations, and
-            enterprise-grade authentication — all at production scale.
-          </p>
-        </div>
-    
-        <div class="experience-highlights">
-    
-          <div class="highlight-item">
-            <span class="highlight-icon">🧠</span>
-            <div>
-              <strong>AI & LLM Pipelines</strong>
-              <p>Integrated Azure OpenAI and Google Gemini into transcription and insight generation workflows. Built RAG-based pipelines for contextual call analysis and automated tagging.</p>
-            </div>
-          </div>
-    
-          <div class="highlight-item">
-            <span class="highlight-icon">🎙️</span>
-            <div>
-              <strong>Speech Processing</strong>
-              <p>Contributed to speaker diarization and transcription systems using NeMo Diarization and Conformer models. Enabled accurate multi-speaker identification across real-time call streams.</p>
-            </div>
-          </div>
-    
-          <div class="highlight-item">
-            <span class="highlight-icon">⚡</span>
-            <div>
-              <strong>Distributed Systems & Event Architecture</strong>
-              <p>Designed event-driven microservices using Apache Kafka. Implemented CQRS and event sourcing patterns for high-throughput data pipelines handling 800K+ daily call events.</p>
-            </div>
-          </div>
-    
-          <div class="highlight-item">
-            <span class="highlight-icon">🔐</span>
-            <div>
-              <strong>Auth & Access Control</strong>
-              <p>Implemented OAuth2 + PKCE authentication flows and a three-tier Role-Based Access Control (RBAC) system supporting enterprise multi-tenancy and tenant-level permission isolation.</p>
-            </div>
-          </div>
-    
-          <div class="highlight-item">
-            <span class="highlight-icon">🏗️</span>
-            <div>
-              <strong>Backend Architecture</strong>
-              <p>Built RESTful services with Java and Spring Boot. Applied saga orchestration patterns for distributed transaction management across microservices.</p>
-            </div>
-          </div>
-    
-        </div>
-    
-        <div class="experience-tech">
-          <span class="tech-pill">Java</span>
-          <span class="tech-pill">Spring Boot</span>
-          <span class="tech-pill">Apache Kafka</span>
-          <span class="tech-pill">Azure OpenAI</span>
-          <span class="tech-pill">Google Gemini</span>
-          <span class="tech-pill">NeMo Diarization</span>
-          <span class="tech-pill">MySQL</span>
-          <span class="tech-pill">OAuth2 + PKCE</span>
-          <span class="tech-pill">CQRS</span>
-          <span class="tech-pill">Event Sourcing</span>
-          <span class="tech-pill">Saga Orchestration</span>
-          <span class="tech-pill">RAG</span>
-        </div>
-    
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span id="year">2026</span> Murli Khaire · Built with HTML, CSS and JavaScript</p>
+        <a href="#home" class="back-to-top">Back to top ↑</a>
       </div>
-    </section>
-
-    <section id="projects">
-      <h1>Featured Projects</h1>
-      <div class="project-card">
-        <div id="slideshow1">
-          <img src="img/quickdeals/Home-Page.png" alt="" />
-        </div>
-        <div class="description">
-          <h3 class="project-title">QuickDeals</h3>
-          <p class="project-description">
-            An E-commerce website clone of gearbest.com website. It sale
-            varities of Product. This was an Individual Project. In these
-            website I created on Homepage, Registration / Login page, Product
-            Page, Cart Page, Payment Page.
-          </p>
-
-          <h4 class="project-tech-stack">
-            Tech stack used : <span>HTML | CSS | JavaScript | Json</span>
-          </h4>
-          <div class="link">
-            <a
-              href="https://github.com/Murli0399/quixotic-vest-9795"
-              target="_blank"
-            >
-              <img src="img/github-sign.png" class="project-github-link" alt=""
-            /></a>
-            <a href="https://quickdeals.netlify.app/" target="_blank"
-              ><img src="img/chain.png" class="project-deployed-link" alt=""
-            /></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div id="slideshow1">
-          <img src="img/take-a-trip.png" alt="" />
-        </div>
-        <div class="description">
-          <h3 class="project-title">Take-A-Trip</h3>
-          <p class="project-description">
-            A service-based website that provides users hasslefree experience to
-            book flight and hotel tickets at their fingertips. we also book rail
-            tickets and also enjoy our full holiday trips.
-          </p>
-
-          <h4 class="project-tech-stack">
-            Tech stack used : <span>HTML | CSS | JavaScript | Json</span>
-          </h4>
-          <div class="link">
-            <a
-              href="https://github.com/Murli0399/purple-crook-1402"
-              target="_blank"
-            >
-              <img src="img/github-sign.png" class="project-github-link" alt=""
-            /></a>
-            <a href="https://clone-of-mmt.netlify.app/" target="_blank"
-              ><img src="img/chain.png" class="project-deployed-link" alt=""
-            /></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div id="slideshow1">
-          <img src="img/auction/auctionsys.png" alt="" />
-        </div>
-        <div class="description">
-          <h3 class="project-title">Automated Auction System</h3>
-          <p class="project-description">
-            An automated Auction System is an Application Software that is used
-            for the buying and selling of products. This software can be used by
-            the auction companies who arrange the Auction. Various buyers and
-            sellers are registered in the Auction company.
-          </p>
-
-          <h4 class="project-tech-stack">
-            Tech stack used : <span>Java | JDBC | Maven | MySql</span>
-          </h4>
-          <div class="link">
-            <a
-              href="https://github.com/Murli0399/Automated-Auction-System"
-              target="_blank"
-            >
-              <img src="img/github-sign.png" class="project-github-link" alt=""
-            /></a>
-            <a
-              href="https://github.com/Murli0399/Automated-Auction-System#readme"
-              target="_blank"
-              ><img src="img/chain.png" class="project-deployed-link" alt=""
-            /></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div id="slideshow1">
-          <img src="img/Recipe/recipe.jpg" alt="" />
-        </div>
-        <div class="description">
-          <h3 class="project-title">Recipe Application</h3>
-          <p class="project-description">
-            Designed a REST API for Recipe Application, which provides all the
-            basic functionalities for Online Recipe Management using JAVA with
-            Spring Boot, Hibernate, Maven, J.D.B.C and MySQL Database as a part
-            of learning curve in Masai School.
-          </p>
-
-          <h4 class="project-tech-stack">
-            Tech stack used :
-            <span
-              >Java | Spring | Spring Boot | JDBC | Hibernate | Maven |
-              MySql</span
-            >
-          </h4>
-          <div class="link">
-            <a
-              href="https://github.com/Murli0399/Online-Recipe-System"
-              target="_blank"
-            >
-              <img src="img/github-sign.png" class="project-github-link" alt=""
-            /></a>
-            <a
-              href="https://github.com/Murli0399/Online-Recipe-System#readme"
-              target="_blank"
-              ><img src="img/chain.png" class="project-deployed-link" alt=""
-            /></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="github">
-      <h1>Github Calendar</h1>
-
-      <div class="calendar">
-        <img src="https://ghchart.rshah.org/Murli0399" alt="Github Calander" />
-      </div>
-      <div class="git-calander">
-        <img
-          id="github-streak-stats"
-          src="https://github-readme-streak-stats.herokuapp.com?user=Murli0399&theme=dark"
-          alt=""
-        />
-        <img
-          id="github-top-langs"
-          src="https://github-readme-stats.vercel.app/api?username=Murli0399&show_icons=true&theme=dark"
-          alt=""
-        />
-        <img
-          id="github-stats-card"
-          src="https://github-readme-stats.vercel.app/api/top-langs/?username=Murli0399&hide_progress=true&theme=dark"
-          alt=""
-        />
-      </div>
-    </section>
-
-    <div class="wrapper">
-      <div class="slider">
-        <div class="slide-track">
-          <div class="slide">
-            <img src="img/java.png" alt="" />
-          </div>
-
-          <div class="slide">
-            <img src="img/python.png" alt="" />
-          </div>
-          
-          <div class="slide">
-            <img src="img/icons8-flask-500.png" alt="" />
-          </div>
-
-
-          <div class="slide">
-            <img src="img/css-3.png" alt="" />
-          </div>
-          <div class="slide">
-            <img src="img/dsa.png" alt="" />
-          </div>
-          <div class="slide">
-            <img src="img/js.png" alt="" />
-          </div>
-          <div class="slide">
-            <img src="img/html-5.png" alt="" />
-          </div>
-          <div class="slide">
-            <img src="img/css-3.png" alt="" />
-          </div>
-          <div class="slide">
-            <img src="img/spring-boot-logo.png" alt="" />
-          </div>
-          <div class="slide">
-            <img src="img/spring-boot.png" alt="" />
-          </div>
-          <div class="slide">
-            <img src="img/swagger_logo-modified.png" alt="" />
-          </div>
-          <div class="slide">
-            <img src="img/github-sign.png" alt="" />
-          </div>
-          <div class="slide">
-            <img src="img/visual-studio.png" alt="" />
-          </div>
-          <div class="slide">
-            <img src="img/postman.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <h1>Contact me</h1>
-      <div class="flex-div">
-        <form id="form" onsubmit="send(); reset(); return false;">
-          <h3 class="form-title">Message me</h3>
-          <label for="name">Name</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="What's your good name?"
-          />
-          <label for="email">Email</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="What's your email address?"
-          />
-          <label for="message">Message</label>
-          <textarea
-            name="message"
-            id="message"
-            cols="30"
-            rows="2"
-            placeholder="What can I help you?"
-          ></textarea>
-          <input type="submit" value="Submit" />
-        </form>
-        <div class="contact-icon">
-          <h3>Get in touch</h3>
-          <p>
-            <img
-              src="img/github-sign.png"
-              onclick="gihub()"
-              id="contact-github"
-              alt=""
-            />
-            <span onclick="gihub()">github.com/Murli0399</span>
-          </p>
-          <p>
-            <img
-              src="img/linkedin.png"
-              onclick="linkedin()"
-              id="contact-linkedin"
-              alt=""
-            />
-            <span onclick="linkedin()">linkedin.com/murli-khaire</span>
-          </p>
-          <p>
-            <img
-              src="img/gmail.png"
-              onclick="email()"
-              id="contact-email"
-              alt=""
-            />
-            <span>murlikhaire28@gmail.com</span>
-          </p>
-          <p>
-            <img src="img/viber.png" id="contact-phone" alt="" />
-            <span>+91 84628-58556</span>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <p>Designed by <span>Murli Khaire</span></p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/github-calendar@2.1.0/dist/github-calendar.min.js"></script>
 
-    <!-- Import JS: Particles Theme -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <!-- Import JS: Sweet Scroll -->
-    <script src="./script/sweet-scroll.min.js"></script>
-
-    <!-- Import JS: Main Script -->
-    <script src="./script/main.js"></script>
-
-    <script src="./script/nav.js" type="module"></script>
-
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="script/email.js"></script>
+    <script src="script/main.js"></script>
   </body>
-
-  <script>
-    function homePage() {
-      window.location.href = "index.html";
-    }
-
-    function resumeFun() {
-      console.log("Download")
-      location.href =
-        "https://drive.google.com/uc?id=1E1Q4sLGpW4Qb-ZkE73UGDsjqUlrWKTGW&export=download";
-    }
-
-    function gihub() {
-      window.open("https://github.com/Murli0399", "_blank");
-    }
-
-    function linkedin() {
-      window.open("https://www.linkedin.com/in/murli-khaire/", "_blank");
-    }
-
-    function email() {
-      window.open("murlikhaire28@gmail.com", "_blank");
-    }
-  </script>
 </html>

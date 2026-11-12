@@ -1,1 +1,122 @@
-document.addEventListener("DOMContentLoaded",function(){new SweetScroll({}),particlesJS("particles-js",{particles:{number:{value:30,density:{enable:!0,value_area:800}},color:{value:"#ffffff"},shape:{type:"polygon",stroke:{width:0,color:"#000000"},polygon:{nb_sides:5},image:{src:"img/github.svg",width:100,height:100}},opacity:{value:.5,random:!1,anim:{enable:!1,speed:1,opacity_min:.1,sync:!1}},size:{value:3,random:!0,anim:{enable:!1,speed:19.18081918081918,size_min:.1,sync:!1}},line_linked:{enable:!0,distance:150,color:"#ffffff",opacity:.4,width:1},move:{enable:!0,speed:4,direction:"none",random:!0,straight:!1,out_mode:"out",bounce:!1,attract:{enable:!1,rotateX:600,rotateY:1200}},nb:80},interactivity:{detect_on:"canvas",events:{onhover:{enable:!1,mode:"grab"},onclick:{enable:!0,mode:"push"},resize:!0},modes:{grab:{distance:400,line_linked:{opacity:1}},bubble:{distance:400,size:40,duration:2,opacity:8,speed:3},repulse:{distance:200,duration:.4},push:{particles_nb:4},remove:{particles_nb:2}}},retina_detect:!0})},!1);
+// ===== Navigation: background on scroll, mobile menu, active link =====
+const nav = document.getElementById("nav-menu");
+const toggle = document.getElementById("nav-toggle");
+const links = document.getElementById("nav-links");
+
+const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 20);
+window.addEventListener("scroll", onScroll, { passive: true });
+onScroll();
+
+function setMenu(open) {
+  links.classList.toggle("open", open);
+  nav.classList.toggle("menu-open", open);
+  toggle.setAttribute("aria-expanded", String(open));
+  toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+}
+
+toggle.addEventListener("click", () => setMenu(!links.classList.contains("open")));
+links.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
+
+const sections = document.querySelectorAll("main section[id]");
+const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+const sectionObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      navLinks.forEach((l) =>
+        l.classList.toggle("active", l.getAttribute("href") === "#" + entry.target.id)
+      );
+    });
+  },
+  { rootMargin: "-45% 0px -50% 0px" }
+);
+sections.forEach((s) => sectionObserver.observe(s));
+
+// ===== Reveal on scroll =====
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.12 }
+);
+document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+
+// ===== Typing effect =====
+const phrases = [
+  "scalable backend systems",
+  "Kafka event pipelines",
+  "AI/LLM pipelines",
+  "multi-tenant SaaS platforms",
+  "secure auth with OAuth2 + RBAC",
+];
+const typedEl = document.getElementById("typed");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (typedEl && !reduceMotion) {
+  let phrase = 0;
+  let chars = phrases[0].length;
+  let deleting = true;
+
+  const tick = () => {
+    const text = phrases[phrase];
+    chars += deleting ? -1 : 1;
+    typedEl.textContent = text.slice(0, chars);
+
+    let delay = deleting ? 40 : 75;
+    if (!deleting && chars === text.length) {
+      delay = 1800;
+      deleting = true;
+    } else if (deleting && chars === 0) {
+      deleting = false;
+      phrase = (phrase + 1) % phrases.length;
+      delay = 300;
+    }
+    setTimeout(tick, delay);
+  };
+  setTimeout(tick, 2000);
+}
+
+// ===== Contact form (FormSubmit: no passwords or API keys in the code) =====
+const form = document.getElementById("contact-form");
+const statusEl = document.getElementById("form-status");
+const submitBtn = document.getElementById("form-submit");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if (form._honey.value) return; // bot filled the hidden field
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending…";
+  statusEl.className = "form-status";
+  statusEl.textContent = "";
+
+  try {
+    const res = await fetch("https://formsubmit.co/ajax/murlikhaire28@gmail.com", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(Object.fromEntries(new FormData(form))),
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || data.success === "false" || data.success === false) {
+      throw new Error(data.message || "Request failed");
+    }
+    form.reset();
+    statusEl.classList.add("ok");
+    statusEl.textContent = "Thanks! Your message has been sent. I'll reply soon.";
+  } catch (err) {
+    statusEl.classList.add("error");
+    statusEl.textContent =
+      "Sorry, the message couldn't be sent. Please email me at murlikhaire28@gmail.com.";
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Send message";
+  }
+});
+
+// ===== Footer year =====
+document.getElementById("year").textContent = new Date().getFullYear();
